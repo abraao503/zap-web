@@ -5,7 +5,9 @@ import {
     BarcodeOutlined,
     BgColorsOutlined,
     FontSizeOutlined,
-    LoadingOutlined
+    LoadingOutlined,
+    ContactsOutlined,
+    NodeExpandOutlined
 } from '@ant-design/icons';
 
 // icons
@@ -15,45 +17,50 @@ const icons = {
     BarcodeOutlined,
     AntDesignOutlined,
     LoadingOutlined,
-    AppstoreAddOutlined
+    AppstoreAddOutlined,
+    ContactsOutlined,
+    NodeExpandOutlined
 };
 
 // ==============================|| MENU ITEMS - UTILITIES ||============================== //
 
 const utilities = {
     id: 'utilities',
-    title: 'Utilities',
+    title: '',
     type: 'group',
     children: [
         {
-            id: 'util-typography',
-            title: 'Typography',
+            id: 'contacts',
+            title: 'Contacts',
             type: 'item',
-            url: '/typography',
-            icon: icons.FontSizeOutlined
+            url: '/contacts',
+            icon: icons.ContactsOutlined,
+            breadcrumbs: false
         },
         {
-            id: 'util-color',
-            title: 'Color',
+            id: 'campaigns',
+            title: 'Campanhas',
             type: 'item',
-            url: '/color',
-            icon: icons.BgColorsOutlined
+            url: '/campaigns',
+            icon: icons.NodeExpandOutlined,
+            breadcrumbs: false
         },
         {
-            id: 'util-shadow',
-            title: 'Shadow',
+            id: 'instances',
+            title: 'Instâncias',
             type: 'item',
-            url: '/shadow',
-            icon: icons.BarcodeOutlined
-        },
-        {
-            id: 'ant-icons',
-            title: 'Ant Icons',
-            type: 'item',
-            url: '/icons/ant',
-            icon: icons.AntDesignOutlined,
+            url: '/instances',
+            icon: icons.AppstoreAddOutlined,
             breadcrumbs: false
         }
+        // {
+        //     id: 'chats',
+        //     title: 'Chats',
+        //     type: 'item',
+        //     url: '/chats',
+        //     icon: icons.LoadingOutlined,
+        //     breadcrumbs: false
+        // }
     ]
 };
 

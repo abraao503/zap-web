@@ -4,7 +4,7 @@
         "browser": true,
         "es2021": true
     },
-    "extends": ["prettier", "plugin:react/jsx-runtime", "plugin:jsx-a11y/recommended", "plugin:react-hooks/recommended"],
+    "extends": ["prettier", "plugin:react/recommended", "plugin:jsx-a11y/recommended", "plugin:react-hooks/recommended"],
     "settings": {
         "import/resolver": {
             "node": {
@@ -23,17 +23,21 @@
     "plugins": ["prettier", "react", "react-hooks"],
     "rules": {
         "react/jsx-filename-extension": 0,
+        "react/react-in-jsx-scope": 0,
         "no-param-reassign": 0,
-        "react/prop-types": 1,
         "react/require-default-props": 0,
         "react/no-array-index-key": 0,
         "react/jsx-props-no-spreading": 0,
         "react/forbid-prop-types": 0,
+        "react/display-name": "off",
+        "react/prop-types": "off",
         "import/order": 0,
         "no-console": 0,
         "jsx-a11y/anchor-is-valid": 0,
         "prefer-destructuring": 0,
         "no-shadow": 0,
+        "no-undef": "error",
+        "jsx-a11y/no-autofocus": "off",
         "no-unused-vars": [
             1,
             {

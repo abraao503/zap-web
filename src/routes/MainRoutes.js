@@ -4,17 +4,12 @@ import { lazy } from 'react';
 import Loadable from 'components/Loadable';
 import MainLayout from 'layout/MainLayout';
 
-// render - dashboard
-const DashboardDefault = Loadable(lazy(() => import('pages/dashboard')));
-
-// render - sample page
-const SamplePage = Loadable(lazy(() => import('pages/extra-pages/SamplePage')));
-
-// render - utilities
-const Typography = Loadable(lazy(() => import('pages/components-overview/Typography')));
-const Color = Loadable(lazy(() => import('pages/components-overview/Color')));
-const Shadow = Loadable(lazy(() => import('pages/components-overview/Shadow')));
-const AntIcons = Loadable(lazy(() => import('pages/components-overview/AntIcons')));
+// const Contacts = Loadable(lazy(() => import('pages/components-overview/Contacts')));
+const Campaigns = Loadable(lazy(() => import('pages/campaigns/Campaigns')));
+const Campaign = Loadable(lazy(() => import('pages/campaigns/Campaign')));
+const Instances = Loadable(lazy(() => import('pages/instances/Instances')));
+const Contacts = Loadable(lazy(() => import('pages/contacts/Contacts')));
+// const Chats = Loadable(lazy(() => import('pages/chats/Chats')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -23,38 +18,29 @@ const MainRoutes = {
     element: <MainLayout />,
     children: [
         {
-            path: '/',
-            element: <DashboardDefault />
+            path: 'contacts',
+            element: <Contacts />
         },
         {
-            path: 'color',
-            element: <Color />
+            path: 'campaigns',
+            element: <Campaigns />
         },
         {
-            path: 'dashboard',
-            children: [
-                {
-                    path: 'default',
-                    element: <DashboardDefault />
-                }
-            ]
+            path: 'campaigns/new',
+            element: <Campaign />
         },
         {
-            path: 'sample-page',
-            element: <SamplePage />
+            path: 'campaigns/view/:id',
+            element: <Campaign />
         },
         {
-            path: 'shadow',
-            element: <Shadow />
-        },
-        {
-            path: 'typography',
-            element: <Typography />
-        },
-        {
-            path: 'icons/ant',
-            element: <AntIcons />
+            path: 'instances',
+            element: <Instances />
         }
+        // {
+        //     path: 'chats',
+        //     element: <Chats />
+        // }
     ]
 };
 
