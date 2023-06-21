@@ -49,7 +49,10 @@ function InstancePage() {
 
     useEffect(() => {
         // const socketInstance = io('http://89.117.33.56', { path: '/socket.io', transports: ['websocket', 'polling'] });
-        const socketInstance = io(process.env.REACT_APP_API_SOCKET_URL, { transports: ['websocket', 'polling'] });
+        const socketInstance = io(process.env.REACT_APP_API_SOCKET_URL, {
+            ...(process.env.REACT_APP_API_SOCKET_PATH && { path: process.env.REACT_APP_API_SOCKET_PATH }),
+            transports: ['websocket', 'polling']
+        });
 
         socketInstance.on(
             'connect',
