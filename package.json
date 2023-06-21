@@ -1,7 +1,6 @@
 {
     "name": "mantis-free-react-admin-template",
     "version": "1.1.1",
-    "private": true,
     "homepage": "https://mantisdashboard.io/free",
     "resolutions": {
         "react-error-overlay": "6.0.9"
